@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "copy-scripts": "cp -r node_modules/reveal.js/js assets/",
+    "copy-plugins": "cp -r node_modules/reveal.js/plugin assets/",
+    "copy-css": "cp -r node_modules/reveal.js/css assets/",
+    "copy-lib": "cp -r node_modules/reveal.js/lib assets/",
+    "build": "npm run copy-scripts && npm run copy-plugins && npm run copy-css && npm run copy-lib"
+  },
+  "dependencies": {
+    "reveal.js": "^3.5.0"
+  }
+}
