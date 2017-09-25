@@ -38,18 +38,18 @@
                   <div data-markdown>
                   ## A tale of 2 tribes
 
-                  - With magic, sourcery, heroes and villains.
+                  - With magic, art, sourcery, heroes and villains.
                   - With ugly hacks (tm)
                   </div>
                   <aside class="notes">
-                    This is the tale of two tribes. It is a tale with magic, sourcery, heros and villains. And like every good tech tale, there will probably be a good deal of ugly hacks. So lets begin.
+                    This is the tale of two tribes. It is a tale with magic, art, sourcery, heros and villains. And like every good tech tale, there will probably be a good deal of ugly hacks. So lets begin.
                   </aside>
                 </section>
                 <section data-background="assets/img/bbang.gif">
                   <div data-markdown>
-                    ## In the beginning...
+                    ## 1. In the beginning...
                   </div>
-                  <aside clas="notes">
+                  <aside class="notes">
                     In the beginning these two tribes were very different. Some may even say they lived in different villages. Or maybe continents. What the heck, they were even...
                   </aside>
                 </section>
@@ -63,40 +63,39 @@
                     &lt;/marquee>
                   </code></pre>
                   <aside class="notes">
-                    PHP was a tribe that was mostly concerned about dynamically printing the text to go inside a &lt;marquee> tag.
+                    PHP was a tribe where their traditional art was mostly concerned about dynamically printing the text to go inside a &lt;marquee> tag.
                   </aside>
                 </section>
                 <section>
+                  <img class="stretch" src="assets/img/07fig01.gif" />
                   <aside class="notes">
-                    JavaScript was a tribe that cared most for getting scrolling text inside of the browser status bar.
+                    JavaScript was a tribe with artwork mostly about getting scrolling text inside of the browser status bar. So in some ways they were already similar. Both concerned about making scrolling text.
                   </aside>
                 </section>
                 <section>
+                  <img class="stretch" src="assets/img/moments.png" />
                   <aside class="notes">
-                    So in some ways they were already similar. Both concerned about making scrolling text. And then you had a couple of magic moments where the tribes were collaborating about making the web a better place. But this was ages ago in the web world.
+                    And then you had a couple of magic moments where the tribes were collaborating on real pieces of art, about making the web a better place. But this was ages ago in the web world.
                   </aside>
                 </section>
-                <section>
+                <section data-background="assets/img/cat-creen.gif">
                   <aside class="notes">
                     Fast forward some years, and the collaboration between the tribes thriving. Byte after byte of PHP processed data went all the way to the JavaScript running in peoples browsers, making the experiences both interactive and flexible.
                   </aside>
                 </section>
-                <section>
+                <section data-background="assets/img/reversed.gif">
                   <aside class="notes">
                     In many ways, the roles were reversed. JavaScript had the honor of creating HTML, while PHP had started sending things for the JavaScript from the server.
                   </aside>
                 </section>
                 <section>
-                  <aside class="notes">
-                    But at the same time, they were not. PHP still had to render the initial markup, and JavaScript still had that important role with the browser status bar.
-                  </aside>
-                </section>
-                <section>
+                  <img class="stretch" src="assets/img/twig-logo.jpg" />
                   <aside class="notes">
                     And with time we got twig in Drupal core, which is not php any more, and so much nicer to use.
                   </aside>
                 </section>
                 <section>
+                  <img class="stretch" src="assets/img/soup.png" />
                   <aside class="notes">
                     But still, I assume many client/server relationships looks like this: (twig and jq soup). Or this
                   </aside>
@@ -115,23 +114,23 @@
                     );
                   </code></pre>
                   <aside class="notes">
-                    So. The tribes had been talking to each other, which is good. But still the PHP tribe would only talk in a certain way, JavaScript would still need to translate it to their own language.
+                    So. The tribes had a healthy exchange of culture, which is good. But still the PHP tribe would only draw in a certain way, and JavaScript would still need to interpret it with their cultural heritage.
                   </aside>
                 </section>
                 <section>
-                  <img src="img/magritte1.jpg" class="stretch" />
+                  <img src="assets/img/magritte1.jpg" class="stretch" />
                   <aside class="notes">
-                    Or maybe we can use another metaphor? Maybe PHP painted this, and JavaScript wrote this, and it's all actually very cool. (pic of not a pipe)
+                    Maybe it can be examplified with something like this? Maybe PHP painted this, and JavaScript wrote this, and it's all actually very cool. (pic of not a pipe)
                   </aside>
                 </section>
                 <section>
-                  <img src="img/magritte1.jpg" class="stretch" />
+                  <img src="assets/img/magritte2.jpg" class="stretch" />
                   <aside class="notes">
                     Or maybe like this? (pic of magritte painting an egg). So with that out of the way, let us look at the current state of using Twig on the back-end.
                   </aside>
                 </section>
                 <section data-markdown>
-                  ## Current state of things
+                  ## 2. Current state of things
                 </section>
                 <section>
                   <div data-markdown>
@@ -155,26 +154,26 @@ Which one would think would mean that a person could now just start using twig i
                 <section>
                   <img src="assets/img/secs.gif" class="stretch" />
                   <aside class="notes">
-                    So, The state of things is, we can use twig templates in the browser now. Or to get back to the metaphor. Both tribes went out of their way, learnt a common language, and are now forming bonds across tribes.
+                    So, The state of things is, we can use twig templates in the browser now. Or to get back to the metaphor. Both tribes are somewhat using the same type of paint, and painting similar motives, and are now forming bonds across tribes.
                   </aside>
                 </section>
                 <section data-markdown>
-                  ## Use-cases for implementing it.
+                  ## 3. Use-cases for implementing it.
 
-                  #### Optimistic rendering
+                  - Optimistic rendering
+                  - Simple client side applications that updates lists
                 </section>
                 <section>
+                  <img src="assets/img/update.gif" alt="" class="stretch">
                   <aside class="notes">
                     A place where this approach really can shine, is where you want to post comments or messages, and are optimistically rendering the result of that posting, before the server has responded. Here is one example of that, where we can see that the optimistic rendering is using the same node display template as the server, but displays it (at least partially) before it gets rendered on the server.
                   </aside>
                 </section>
                 <section>
+                  <img src="assets/img/ctrl2.png" alt="" class="stretch">
                   <aside class="notes">
                     Another place I think it shines is very simple client side applications, where for example a list is supposed to be updated from time to time. Like "users online". You can render the initial state of the users, and then as it updates, you can use the same template to render the new list of users.
                   </aside>
-                </section>
-                <section>
-                  <img src="assets/img/ctrl2.png" alt="" class="stretch">
                 </section>
                 <section>
                   <img src="assets/img/ctrl_js2.png" alt="" class="stretch">
@@ -182,24 +181,30 @@ Which one would think would mean that a person could now just start using twig i
                 <section>
                   <img src="assets/img/users.gif" alt="" class="stretch">
                   <aside class="notes">
-                    So is this the end of the tale? Are the tribes living in harmony? Well, not really. Things are a bit more complex than my two small rainbow examples.
+                    So is this the end of the tale? Are the tribes living together, creating art in beautiful harmony? Well, not really. Things are a bit more complex than my two small rainbow examples.
                   </aside>
                 </section>
-                <section>
+                <section data-background="assets/img/bidea.gif">
+                  <div data-markdown>
+                    ## 4 Bad examples
+                  </div>
                   <aside class="notes">
-                    If we are returning to the metaphor, this is probably the place where the two tribes were excited about the fact that they could communicate. But the differences in either their dialect, culture or just pronunciation made it so that not everything simply came through. Things got lost in translation. Or were untranslatable. Let's have a look at this.
+                    If we are returning to the metaphor, this is probably the place where the two tribes were excited about the fact that they can collaborate in creating art history. But the differences in either their dialect, culture or just pronunciation made it so that not all pictures were agreed upon. Things got lost in translation. Or were untranslatable. Let's have a look at this.
                   </aside>
                 </section>
                 <section>
-                  <img class="stretch" src="assets/img/trans.png" />
+                  <img class="stretch" src="assets/img/bartik.png" />
                   <aside class="notes">
                     One really simple example of this is literally about translation. In Drupal templates we use a tag called the `{% trans %}` tag, that we use for translation. In vanilla twig.js this simply does not exist. So if we tried to re-use a template that used this tag, it would totally crash in the browser.
                   </aside>
                 </section>
                 <section>
+                  <img class="stretch" src="assets/img/trans.png" />
+                </section>
+                <section>
                   <img src="assets/img/extend.png" class="stretch" />
                   <aside class="notes">
-                    In a problem solving matter, one can actually extend twig.js to add this trans tag. So to continue the metaphor, the other tribe just learns the dialect! But there are other issues.
+                    In a problem solving matter, one can actually extend twig.js to add this trans tag. So to continue the metaphor, the JavaScript tribe was maybe missing a type of brush to mimic the PHP painting. But there are other issues.
                   </aside>
                 </section>
                 <section>
@@ -213,33 +218,38 @@ Which one would think would mean that a person could now just start using twig i
                 </section>
                 <section>
                   <img src="assets/img/nodephp.png" class="stretch" />
-                </section>
-                <section>
-                  <img src="assets/img/nodejs.png" class="stretch" />
                   <aside class="notes">
                     This is convenient. But very inconvenient if you try to re-use that template for a structure that is similar. [pic of something like that]
                   </aside>
                 </section>
                 <section>
+                  <img src="assets/img/nodejs.png" class="stretch" />
+                </section>
+                <section>
                   <div data-markdown>
                     ## Cost/value
 
-                    - Twig.js minified is 80K
-                    - React.js minified is 14kb
+                    - Twig.js minified is 83K
+                    - React.js + React DOM minified is 46kb
                   </div>
                   <aside class="notes">
-                    Now the third point I would like to make in this context, is the cost of adding a template language like twig to you client side bundle. Minified, twigjs clocks in at 80KB [CHECK IT], which is like way more than XXXXXX
+                    Now the third point I would like to make in this context, is the cost of adding a template language like twig to you client side bundle. Minified, twigjs clocks in at 83KB [CHECK IT], which is like way more than for example React.
 
                     So, say you wanted to include it to do specifically only the users online part, which was examplified earlier. It would be a pretty high cost to include the library only for that. Could there be another way?
                   </aside>
                 </section>
-                <section data-markdown>
-                  ## Hacks
+                <section>
+                  <div data-markdown>
+                    ## 5. Hacks
+                  </div>
+                  <aside class="notes">
+                    In Drupal 8, we already have a client side library with a template language. No, I am not talking about this language.
+                  </aside>
                 </section>
                 <section>
                   <img src="assets/img/jq-soup.png" class="stretch" />
                   <aside class="notes">
-                  In Drupal 8, we already have a client side library with a template language. No, I am not talking about this language. [slide with jq soup] I am talking about underscore.js
+                    I am talking about underscore.js
                   </aside>
                 </section>
                 <section>
@@ -259,7 +269,7 @@ compiled({name: 'moe'});
 ```
 </div>
 <aside class="notes">
-  So what does this have to do with twig? Or to return to our metaphor... Is the js tribe trying to do sign language when spoken to through Braille?
+  So what does this have to do with twig? Or to return to our metaphor... Is this JavaScript trying to write "this is not a pipe" all over again?
 </aside>
                 </section>
                 <section>
@@ -283,7 +293,7 @@ compiled({name: 'moe'});
 ```
                   </div>
                   <aside class="notes">
-                    So basically if you have small pieces of your application that needs to be rendered both client side and server side, and those pieces are not nested render arrays, you already have everything you need to be able to achieve this.
+                    So basically if you have small pieces of your application that needs to be rendered both client side and server side, and those pieces are not nested render arrays, you already have everything you need to be able to achieve this. Of course this a a whole range of limitations. One of them is that the underscore template language does not give you twig for loops, but getting around this would be an excecise for the audience.
                   </aside>
                 </section>
                 <section>
@@ -303,8 +313,7 @@ compiled({name: 'moe'});
 - [Twig website](https://twig.symfony.com/)
 - [Twig.js website](https://github.com/twigjs/twig.js)
 - [Twig.js module for Drupal 8.](https://www.drupal.org/project/twigjs)
-
-
+- [https://eiriksm.github.io/twig-and-twigjs-talk/ (slides)](https://eiriksm.github.io/twig-and-twigjs-talk/)
                   </div>
                 </section>
             </div>
