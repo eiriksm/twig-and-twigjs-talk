@@ -15,7 +15,9 @@
 
                   - Eirik Morland
                   - Developer at Ny Media
-                  - eiriksm@gh / eiriksm@d.o / @orkj
+                  - [eiriksm@github](https://github.com/eiriksm/)
+                  - [eiriksm@drupal.org](https://www.drupal.org/u/eiriksm)
+                  - [@orkj](https://twitter.com/orkj)
                   </div>
                   <aside class="notes">
                       The backstory for this talk was this animated gif I posted about 3 years ago. I just checked it out, and it was in January 2015, and the Drupal version in question was Drupal 8, beta 4
@@ -28,31 +30,33 @@
                     <div data-markdown>
                   ## What we will cover
 
-                  - What is the story behind getting where we are now?
-                  - What is the current state of how we can do this?
-                  - What are some usecases for implementing it?
-                  - What are some bad examples of template-sharing code-bases?
-                  - Hacks, tips and tricks
+                  - Part 1: What is the story behind getting where we are now?
+                  - Part 2: What is the current state of how we can do this?
+                  - Part 3: What are some usecases for implementing it?
+                  - Part 4: What are some bad examples of template-sharing code-bases?
+                  - Part 5: Hacks, tips and tricks
                   </div>
                   <aside class="notes">
-                      To get to the bottom of this, I will tell you a magical tale about 2 families.
+                    These are the things we will go through. To get to the bottom of this, I will tell you a magical tale about 2 families.
                   </aside>
                 </section>
-                <section data-markdown>
-                    <div data-markdown>
-                  ## What we will cover
+                <section>
+                  <div data-markdown>
+                    ## What we will cover
 
-                  - Art
-                  - Magic
-                  - Heroes
-                  - Villains
-                  - Dark sorcery
-                </div>
-                  <aside class="notes"It will be a tale of art, magic, heroes, villains and dark sorcery.></aside>
+                    - Chapter 1: Art
+                    - Chapter 2: Magic
+                    - Chapter 3: Heroes
+                    - Chapter 4: Villains
+                    - Chapter 5: Dark sorcery
+                    </div>
+                    <aside class="notes">
+                      So to make my different parts more exciting, lets switch them out with chapters.
+                    </aside>
                 </section>
                 <section data-background="assets/img/bbang.gif">
                   <div data-markdown>
-                    ## 1. In the beginning...
+                    ## Chapter 1: Art
                   </div>
                   <aside class="notes">
                     In the beginning these two tribes were very different. Some may even say they lived in different villages. Or maybe continents. What the heck, they were even...
@@ -134,8 +138,13 @@
                     Or maybe like this? (pic of magritte painting an egg). So with that out of the way, let us look at the current state of using Twig on the back-end.
                   </aside>
                 </section>
-                <section data-markdown>
-                  ## 2. Current state of things
+                <section>
+                  <div data-markdown>
+                  ## Chapter 2: Magic
+                </div>
+                  <aside class="notes">
+                    From the JavaScript family a wizard was born. This wizard had magic powers, which could utilize PHPs wonderful new artform in its own environment. The wizard was called twig.js.
+                  </aside>
                 </section>
                 <section>
                   <div data-markdown>
@@ -162,11 +171,13 @@ Which one would think would mean that a person could now just start using twig i
                     So, The state of things is, we can use twig templates in the browser now. Or to get back to the metaphor. Both tribes are somewhat using the same type of paint, and painting similar motives, and are now forming bonds across tribes.
                   </aside>
                 </section>
-                <section data-markdown>
-                  ## 3. Use-cases for implementing it.
-
-                  - Optimistic rendering
-                  - Simple client side applications that updates lists
+                <section>
+                  <div data-markdown>
+                      ## Chapter 3: Heroes
+                  </div>
+                  <aside class="notes">
+                      After seeing what the wizard can do, one might think she was a hero to everyone. So let us first look at some of the inhabitants of this village of web that were now cheering for this new hero. Let us look at good use-cases for implementing this.
+                  </aside>
                 </section>
                 <section>
                   <img src="assets/img/update.gif" alt="" class="stretch">
@@ -191,10 +202,10 @@ Which one would think would mean that a person could now just start using twig i
                 </section>
                 <section data-background="assets/img/bidea.gif">
                   <div data-markdown>
-                    ## 4 Bad examples
+                    ## Chapter 4: Villains
                   </div>
                   <aside class="notes">
-                    If we are returning to the metaphor, this is probably the place where the two tribes were excited about the fact that they can collaborate in creating art history. But the differences in either their dialect, culture or just pronunciation made it so that not all pictures were agreed upon. Things got lost in translation. Or were untranslatable. Let's have a look at this.
+                      Not everyone in the PHP land was very comfortable with this other family stealing their secret sauce. And if this is because of jealousy, greed or just evil is up to the listener to reflect on. We are now going to look at villains in this fairytale. Forces that might bring this wizard down. Let’s look at some bad examples of this strategy.
                   </aside>
                 </section>
                 <section>
@@ -245,10 +256,10 @@ Which one would think would mean that a person could now just start using twig i
                 </section>
                 <section>
                   <div data-markdown>
-                    ## 5. Hacks
+                    ## Chapter 5: Dark sorcery
                   </div>
                   <aside class="notes">
-                    In Drupal 8, we already have a client side library with a template language. No, I am not talking about this language.
+                      In this JavaScript family, there were also other movements and forces. Forces of a dark type of magic. They said they could perform the magic of the wizard in a quicker and easier way. But it came with a cost. Let’s talk a bit about other ways of achieving similar benefits and the sacrifices one must make. In Drupal 8, we already have a client side library with a template language. No, I am not talking about this language.
                   </aside>
                 </section>
                 <section>
