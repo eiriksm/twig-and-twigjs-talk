@@ -11,3 +11,6 @@ div.link a {
   color: #fff;
   text-decoration: none;
 }
+div.black h2 {
+  color: #000;
+}
