@@ -101,7 +101,7 @@
                       &lt;/marquee>
                     </code></pre>
                   <aside class="notes">
-                      And with this, all things were in place for a thriving art culture in PHP, but still, somehow, many of their artworks would be plain wasted because of JavaScripts need to take over their HTML tags.
+                      And with this, all things were in place for a thriving art culture in PHP. But the existince of the two families side by side made things not ideal. Many times the base of which the art was built, twig, would be plain wasted because of JavaScripts need to take over their HTML tags.
                   </aside>
                 </section>
                 <section>
@@ -173,7 +173,7 @@ Which one would think would mean that a person could now just start using twig i
                 <section>
                   <img src="assets/img/update.gif" alt="" class="stretch">
                   <aside class="notes">
-                    A place where this approach really can shine, is where you want to post comments or messages, and are optimistically rendering the result of that posting, before the server has responded. Here is one example of that, where we can see that the optimistic rendering is using the same node display template as the server, but displays it (at least partially) before it gets rendered on the server.
+                    A place where this approach really can shine is optimistic rendering. For example when posting comments or messages, and you are optimistically rendering the result of that posting, before the server has responded. Here is one example of that, where we can see that the optimistic rendering is using the same node display template as the server, but displays it (at least partially) before it gets rendered on the server.
                   </aside>
                 </section>
                 <section>
@@ -211,7 +211,7 @@ Which one would think would mean that a person could now just start using twig i
                 <section>
                   <img src="assets/img/extend.png" class="stretch" />
                   <aside class="notes">
-                    In a problem solving matter, one can actually extend twig.js to add this trans tag. So to continue the metaphor, the JavaScript tribe was maybe missing a type of brush to mimic the PHP painting. But there are other issues.
+                    But, In a problem solving matter, one can actually extend twig.js to add this trans tag. And with this, also be able to use the trans tag in twig templates in twig.js. But there are other problems.
                   </aside>
                 </section>
                 <section>
@@ -232,20 +232,26 @@ Which one would think would mean that a person could now just start using twig i
                 <section>
                   <img src="assets/img/nodejs.png" class="stretch" />
                 </section>
-                <section>
+                <section data-background="assets/img/cost.gif">
                   <div data-markdown>
                     ## Cost/value
-
-                    - Twig.js minified is 83K
-                    - React.js + React DOM minified is 46kb
                   </div>
                   <aside class="notes">
-                    Now the third point I would like to make in this context, is the cost of adding a template language like twig to you client side bundle. Minified, twigjs clocks in at 83KB [CHECK IT], which is like way more than for example React.
+                      Now the third point I would like to make in this context, is the cost of adding a template language like twig to you client side bundle. 
+                  </aside>
+                </section>
+                <section>
+                  <div data-markdown>
+                      - Twig.js minified is 83K
+                      - React.js + React DOM minified is 46kb
+                  </div>
+                  <aside class="notes">
+                    Minified, twigjs clocks in at 83KB [CHECK IT], which is like way more than for example React.
 
                     So, say you wanted to include it to do specifically only the users online part, which was examplified earlier. It would be a pretty high cost to include the library only for that. Could there be another way?
                   </aside>
                 </section>
-                <section>
+                <section data-background="assets/img/sorcery.gif">
                   <div data-markdown>
                     ## Chapter 5: Dark sorcery
                   </div>
@@ -276,7 +282,7 @@ compiled({name: 'moe'});
 ```
 </div>
 <aside class="notes">
-  So what does this have to do with twig? Or to return to our metaphor... Is this JavaScript trying to write "this is not a pipe" all over again?
+  So what does this have to do with twig? How can this compety with the almight wizard twig.js and her superpowers?
 </aside>
                 </section>
                 <section>
@@ -304,14 +310,30 @@ compiled({name: 'moe'});
                   </aside>
                 </section>
                 <section>
+                  <img src="assets/img/tl-php.png" class="stretch" />
+                </section>
+                <section>
+                  <img src="assets/img/tl-js.png" class="stretch" />
+                </section>
+                <section>
+                  <img src="assets/img/twiglite.gif" class="stretch" />
+                </section>
+                <section>
+                  <img class="stretch" src="assets/img/twigjs.png" />
+                </section>
+
+                <section>
                   <div data-markdown>
 ## Summary
 
-- It is possible to use twig on both the client and the server
-- Sharing templates can be quite a bliss.
-- Complex templates can be hard to share.
-- For small tasks you can actually use underscore.js which is in core.
+- The art history of the village of the web is beautiful and constantly evolving
+- Some people in this village are heroes, but they might not be everyone’s heroes
+- Sometimes there are no wizards that can sprinkle magic dust over your application and give you the bliss of sharing templates
+- You can use dark sorcery, but only if you dare
                   </div>
+                </section>
+                <section data-background="assets/img/end.gif">
+
                 </section>
                 <section>
                   <div data-markdown>
